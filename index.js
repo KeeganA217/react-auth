@@ -3,6 +3,12 @@ const http = require("http");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const router = require("./router");
+const mongoose = require("mongoose");
+
+mongoose.connect(
+  "mongodb+srv://keegan217:keegan217@users.8i9z7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
